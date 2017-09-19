@@ -1,0 +1,15 @@
+### works for .php to js
+# <FilesMatch "\.php">
+	# SetHandler application/x-httpd-php
+	# Header set Content-type "text/js"
+# </FilesMatch>
+
+
+# <FilesMatch "^.*master.js$">
+	# SetHandler application/x-httpd-php
+	# Header set Content-type "text/js"
+# </FilesMatch>
+
+RewriteEngine On
+RewriteRule ^test\.js$ test.php
+# RewriteRule ^.*master.js$ test.php
